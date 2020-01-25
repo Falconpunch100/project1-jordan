@@ -1,15 +1,12 @@
 #banner {
-    background-color: #c6ffb3;
+    background-color: gray;
     margin: auto;
-    padding: 50px;
-    text-align: center;
-    font-size: 100px;
+    padding: 100px;
     }
-
     .searchbar {
         border: none;
         margin: auto;
-        width:100%;
+        width:100%
     }
     
     .searchbar:hover, .searchbar:active, .searchbar:focus {
@@ -17,26 +14,3 @@
         outline: none;
         box-shadow: none;
     }
-    .sidenav {
-        font-family: "Actor";
-        color: #000000;
-        height: 100%;
-        width: 160px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #e6e6e6;
-        overflow-x: hidden;
-        padding-top: 20px;
-      }
-      
-      .sidenav a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 20px;
-        font-family: "Actor";
-        color: #000000;
-        display: block;
-      }
-
