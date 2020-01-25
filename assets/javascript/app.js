@@ -77,7 +77,7 @@ var storedResponse = {
 
 //function for when a user searches for food
 function searchFood(){
-    var searched = $("#foodSearch").val();
+    var searched = $(".searchbar").val();
     var queryURL = "https://api.spoonacular.com/recipes/search?query=" + searched + "&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
     
 //the ajax call to the website for JSON data   
@@ -92,15 +92,16 @@ $.get(queryURL)
 $("#submit").on("click", function(event){
     event.preventDefault();
     searchFood();
+    $(".searchResults").append(searchFood())
 });
 
 
 //Create the new row
-var newRow = $("<tr>").append(
-    $("<td>").text(placeholder),
-    $("<td>").text(placeholder),
-    $("<td>").text(placeholder),
-);
+// var newRow = $("<tr>").append(
+//     $("<td>").text(placeholder),
+//     $("<td>").text(placeholder),
+//     $("<td>").text(placeholder),
+// );
 
 //Append new row to the table
-$("#placeholder-table> tbody").append(newRow);
+// $("#placeholder-table> tbody").append(newRow);
