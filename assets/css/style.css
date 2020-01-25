@@ -1,0 +1,17 @@
+#banner {
+    background-color: gray;
+    margin: auto;
+    padding: 100px;
+    }
+
+    .submit {
+        border: none;
+    }
+    
+    .searchbar:hover, .searchbar:active, .searchbar:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+
