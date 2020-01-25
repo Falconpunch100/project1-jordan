@@ -7,15 +7,100 @@
 //** THE PULL Should list most recent published recipes first then going backwards
 //limit search result to 10
 //those 10 images will then be displayed on the screen 
+var storedResponse = {
+    "results": [
+    {
+    "id": 485365,
+    "title": "Chicken Spinoccoli – Breaded Stuffed Chicken Breast With Spinach, Broccoli and Cheese",
+    "readyInMinutes": 65,
+    "servings": 4,
+    "image": "chicken-spinoccoli-breaded-stuffed-chicken-breast-with-spinach-broccoli-and-cheese-485365.jpg",
+    "imageUrls": [
+    "chicken-spinoccoli-breaded-stuffed-chicken-breast-with-spinach-broccoli-and-cheese-485365.jpg"
+    ]
+    },
+    {
+    "id": 107878,
+    "title": "Garlic Chicken",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "image": "garlic-chicken-2-107878.png",
+    "imageUrls": [
+    "garlic-chicken-2-107878.png",
+    "garlic_chicken-107878.jpg"
+    ]
+    },
+    {
+    "id": 110434,
+    "title": "Chicken Divan",
+    "readyInMinutes": 50,
+    "servings": 6,
+    "image": "chicken-divan-110434.jpg",
+    "imageUrls": [
+    "chicken-divan-110434.jpg"
+    ]
+    },
+    {
+    "id": 129383,
+    "title": "Chicken With Cranberries",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "image": "chicken-with-cranberries-2-129383.jpg",
+    "imageUrls": [
+    "chicken-with-cranberries-2-129383.jpg"
+    ]
+    },
+    {
+    "id": 136858,
+    "title": "Chicken Saltimbocca",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "image": "chicken-saltimbocca-2-136858.png",
+    "imageUrls": [
+    "chicken-saltimbocca-2-136858.png"
+    ]
+    }
+    ],
+    "baseUri": "https://spoonacular.com/recipeImages/",
+    "offset": 0,
+    "number": 5,
+    "totalResults": 326,
+    "processingTimeMs": 332,
+    "expires": 1580012636877,
+    "isStale": false
+    };
+//"https://api.spoonacular.com/recipes/search?query=" + food "&number=" + number + "&apiKey=d7615b5038b14b0e99d9079f0aee801d"
+// API Key: d7615b5038b14b0e99d9079f0aee801d
+//example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
 
 
 
+//function for when a user searches for food
+function searchFood(){
+    var searched = $("#foodSearch").val();
+    var queryURL = "https://api.spoonacular.com/recipes/search?query=" + searched + "&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
+    
+//the ajax call to the website for JSON data   
+$.get(queryURL)
+.done(function(response){
+    storedResponse = response;
+    console.log(storedResponse);
+});
+}
+
+//when search button is clicked the searchFood() function is run---- takes search keyword and adds into the queryURL then makes an AJAX call with the url and returnes the data
+$("#searchButton").on("click", function(event){
+    event.preventDefault();
+    searchFood();
+});
 
 
+//Create the new row
+var newRow = $("<tr>").append(
+    $("<td>").text(placeholder),
+    $("<td>").text(placeholder),
+    $("<td>").text(placeholder),
+);
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function(response) {
-
-})
+//Append new row to the table
+$("#placeholder-table> tbody").append(newRow);
