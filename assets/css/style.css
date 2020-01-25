@@ -4,8 +4,10 @@
     padding: 100px;
     }
 
-    .submit {
+    .searchbar {
         border: none;
+        margin: auto;
+        width:100%
     }
     
     .searchbar:hover, .searchbar:active, .searchbar:focus {
