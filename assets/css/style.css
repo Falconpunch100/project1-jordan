@@ -1,7 +1,9 @@
 #banner {
     background-color: gray;
     margin: auto;
-    padding: 100px;
+    padding: 50px;
+    text-align: center;
+    font-size: 100px;
     }
 
     .searchbar {
