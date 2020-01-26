@@ -1,14 +1,18 @@
-body {
-    background-color: skyblue;
-}
+
 
 #banner {
-    background-color: gray;
+    background-image: url("/Users/bozhidargeorgiev/Desktop/Homework/project1/assets/images/xbeEgrNvSHyJVxgOElLg_potato skins SITE-3.jpg");
+    background-size: cover;
     margin: auto;
     padding: 50px;
     text-align: center;
     font-size: 100px;
     }
+
+    body {
+        background-color: skyblue;
+    }
+    
     .searchbar {
         border: none;
         margin: auto;
