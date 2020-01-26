@@ -1,7 +1,13 @@
+body {
+    background-color: skyblue;
+}
+
 #banner {
     background-color: gray;
     margin: auto;
-    padding: 100px;
+    padding: 50px;
+    text-align: center;
+    font-size: 100px;
     }
     .searchbar {
         border: none;
@@ -14,3 +20,29 @@
         outline: none;
         box-shadow: none;
     }
+
+    .sidenav {
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 160px; /* Set the width of the sidebar */
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    .submitbutton {
+        display: block;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 8px;
+        width: 80%;
+        max-width: 100px;
+        border-radius: 8px;
+        background: tomato;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-out;
