@@ -111,7 +111,7 @@ var storedResponse = {
 
 
 //when search button is clicked the searchFood() function is run---- takes search keyword and adds into the queryURL then makes an AJAX call with the url and returnes the data
-$(".submit").on("click", function(event){
+$("#submit").on("click", function(event){
     
     event.preventDefault();
     var searched = $(".searchbar").val().trim();
@@ -123,6 +123,8 @@ $(".submit").on("click", function(event){
         method: "GET"
     }).then(function(response) {
         console.log(response)
+        $(".searchResults").text(JSON.stringify(response));
+
     
     })
     
