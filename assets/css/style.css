@@ -1,6 +1,6 @@
 .banner-image {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://files.slack.com/files-pri/TQBBC7SS0-FTAA0ER4P/image.png");
-        height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://image.shutterstock.com/image-photo/mexican-taco-meat-beans-vegetables-260nw-692950210.jpg");
+    height: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,13 +9,11 @@
 
 #banner {
     color: white;
-    background-image: url("/Users/bozhidargeorgiev/Desktop/Homework/project1/assets/images/xbeEgrNvSHyJVxgOElLg_potato skins SITE-3.jpg");
     background-size: cover;
     margin: auto;
     padding: 50px;
     text-align: center;
     font-size: 100px;
-    background-color: green;
     }
 
     body {
@@ -55,13 +53,13 @@
         text-decoration: none;
         letter-spacing: 1px;
         transition: all 0.3s ease-out;
-
-
     }
 
     .column {
         width: 33.33%;
-        padding: 80px;
+        padding: 70px 100px 70px 100px;
+        border: solid 1px white;
+        background-color: #007bff;
         text-align: center;
         font-size: 20px;
         cursor: pointer;

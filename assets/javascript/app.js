@@ -99,7 +99,7 @@ $("#submit").on("click", function(event){
     });
     
 });
-//Create the new row
+//Create the new row and the new boxes with the recipe information (and possibly the recipe image itself)
 var newRow = $("<tr>").append(
     $("<td>").text(placeholder),
     $("<td>").text(placeholder),
@@ -107,3 +107,4 @@ var newRow = $("<tr>").append(
 );
 //Append new row to the table
 $("#placeholder-table> tbody").append(newRow);
+
