@@ -91,7 +91,10 @@ $("#submit").on("click", function(event){
         for (i = 0; i < result.length; i++){
             console.log(result[i].id);
             console.log(result[i].title);
-            
+            var p = $("<p>");
+            p.text(result[i].title).val();
+            $(".searchResults").append(p);
+
         }
     });
     
