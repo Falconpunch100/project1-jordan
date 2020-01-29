@@ -79,13 +79,19 @@ $("#submit").on("click", function(event){
     
     event.preventDefault();
     var searched = $(".searchbar").val().trim();
-    var queryURL = "https://api.spoonacular.com/recipes/search?query=" + searched + "&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
+    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + searched + "&maxFat=25&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
      $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
         console.log(response)
         $(".searchResults").text(JSON.stringify(response));
+        for (var i = 0; i<response.length; i++) {
+            var tRow = $("<tr>")
+            var 
+
+        }
+
     
     })
     
