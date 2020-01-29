@@ -90,19 +90,18 @@ $("#submit").on("click", function(event){
         // $(".searchResults").text(JSON.stringify(response));
         var i;
         for (i = 0; i < result.length; i++){
+            var id= result[i].id
             console.log(result[i].id);
             console.log(result[i].title);
             
         }
+        
+           
+            
+        
     });
-
+    
     
 });
-//Create the new row
-var newRow = $("<tr>").append(
-    $("<td>").text(placeholder),
-    $("<td>").text(placeholder),
-    $("<td>").text(placeholder),
-);
-//Append new row to the table
-$("#placeholder-table> tbody").append(newRow);
+
+// var secondQueryURL= "https://api.spoonacular.com/recipes/"+ idNum + "/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d"
