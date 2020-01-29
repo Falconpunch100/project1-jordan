@@ -73,7 +73,7 @@ var storedResponse = {
 // API Key: d7615b5038b14b0e99d9079f0aee801d
 //example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
 
-
+var recipeId;
 //when search button is clicked the searchFood() function is run---- takes search keyword and adds into the queryURL then makes an AJAX call with the url and returnes the data
 $("#submit").on("click", function(event){
     
@@ -93,15 +93,26 @@ $("#submit").on("click", function(event){
             var id= result[i].id
             console.log(result[i].id);
             console.log(result[i].title);
-            
+            recipeId = result[i].id;
+            var p = $("<p>");
+            var q = $("<img>");
+        var imageID = result[i].id;
+        var image = "https://spoonacular.com/recipeImages/"+imageID+"-556x370.jpg"
+        q.attr("src", image);
+        p.text(result[i].title);
+        $(".searchResults").append(p,q);
         }
-        
-           
-            
-        
-    });
-    
-    
+    }); 
+});
+
+$(document).on("click", "img", function(event){
+
+    //make a new api call
+    console.log("hello")
+    event.preventDefault();
+    var recipeLink = "https://api.spoonacular.com/recipes/"+recipeId+"/information?includeNutrition=false"
+    // location.href = recipeLink;
+    console.log("potato");
 });
 
 // var secondQueryURL= "https://api.spoonacular.com/recipes/"+ idNum + "/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d"
