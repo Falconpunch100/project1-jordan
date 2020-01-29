@@ -69,57 +69,17 @@ var storedResponse = {
     "expires": 1580012636877,
     "isStale": false
     };
-//"https://api.spoonacular.com/recipes/search?query=" + food "&number=" + number + "&apiKey=d7615b5038b14b0e99d9079f0aee801d"
 
 // API Key: d7615b5038b14b0e99d9079f0aee801d
 //example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
 
 
-
-//function for when a user searches for food
-// function searchFood(){
-
-    var searched = $(".searchbar").val().trim();
-    var queryURL = "https://api.spoonacular.com/recipes/search?query=" + searched + "&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
-
-//the ajax call to the website for JSON data  
-
-// $.get( queryURL, function( data ) {
-//     console.log(data);
-//     for (var i= 0; i<data.length; i++) {
-
-
-//     $(".serachResults").append(data[i].title);
-//     $(".serachResults").append(data[i].servings);
-//     $(".serachResults").append(data[i].readyInMinutes);
-//     }
-//   });
-// };
-
-
-
-
-
-// $.get
-// // $.get(queryURL)
-// // .done(function(response){
-// //     storedResponse = response;
-// //     console.log(storedResponse);
-// // });
-// }
-
-
-
-
 //when search button is clicked the searchFood() function is run---- takes search keyword and adds into the queryURL then makes an AJAX call with the url and returnes the data
 $("#submit").on("click", function(event){
-
+    
     event.preventDefault();
     var searched = $(".searchbar").val().trim();
     var queryURL = "https://api.spoonacular.com/recipes/search?query=" + searched + "&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
-    // searchFood();
-    // $(".searchResults").append(searchFood())
-    $.ajax({
      $.ajax({
         url: queryURL,
         method: "GET"
