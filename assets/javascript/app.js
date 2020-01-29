@@ -86,19 +86,15 @@ $("#submit").on("click", function(event){
     }).then(function(response) {
         console.log(response)
         $(".searchResults").text(JSON.stringify(response));
-
     
     })
     
 });
-
-
 //Create the new row
 // var newRow = $("<tr>").append(
 //     $("<td>").text(placeholder),
 //     $("<td>").text(placeholder),
 //     $("<td>").text(placeholder),
 // );
-
 //Append new row to the table
 // $("#placeholder-table> tbody").append(newRow);
