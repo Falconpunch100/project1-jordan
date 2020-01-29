@@ -1,6 +1,14 @@
-
+.banner-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://files.slack.com/files-pri/TQBBC7SS0-FTAA0ER4P/image.png");
+        height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
 #banner {
+    color: white;
     background-image: url("/Users/bozhidargeorgiev/Desktop/Homework/project1/assets/images/xbeEgrNvSHyJVxgOElLg_potato skins SITE-3.jpg");
     background-size: cover;
     margin: auto;
@@ -50,3 +58,15 @@
         text-decoration: none;
         letter-spacing: 1px;
         transition: all 0.3s ease-out;
+
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 50px;
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+    }
