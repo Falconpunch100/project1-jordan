@@ -1,6 +1,7 @@
 #banner {
     background-image: url("../images/xbeEgrNvSHyJVxgOElLg_potato\ skins\ SITE-3.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     margin: auto;
     padding: 50px;
     text-align: center;
@@ -29,8 +30,11 @@
         /* padding: 6px 8px 6px 16px; */
         font-size: 20px;
         left: 10%;
+        float: left;
     } 
-
+.col-2 {
+    float: right;
+}
     .submitbutton {
         display: block;
         box-sizing: border-box;
@@ -46,3 +50,36 @@
         letter-spacing: 1px;
         transition: all 0.3s ease-out;
     }
+    .column {
+        width: 33.33%;
+        padding: 80px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+        margin: 30px;
+        float:right;
+    }
+   
+    .row2{
+        width: 33.33%;
+        padding: 80px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+        margin: 30px;
+        float:right;
+    }
+    .row3 {
+        width: 33.33%;
+        padding: 80px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+        margin: 30px;
+        float:right;
+    }
+   
+      
