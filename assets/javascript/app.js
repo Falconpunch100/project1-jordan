@@ -84,17 +84,23 @@ $("#submit").on("click", function(event){
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        console.log(response)
-        $(".searchResults").text(JSON.stringify(response));
-    
-    })
+        console.log(response);
+        var result = response.results
+        // $(".searchResults").text(JSON.stringify(response));
+        var i;
+        for (i = 0; i < result.length; i++){
+            console.log(result[i].id);
+            console.log(result[i].title);
+            
+        }
+    });
     
 });
 //Create the new row
-// var newRow = $("<tr>").append(
-//     $("<td>").text(placeholder),
-//     $("<td>").text(placeholder),
-//     $("<td>").text(placeholder),
-// );
+var newRow = $("<tr>").append(
+    $("<td>").text(placeholder),
+    $("<td>").text(placeholder),
+    $("<td>").text(placeholder),
+);
 //Append new row to the table
-// $("#placeholder-table> tbody").append(newRow);
+$("#placeholder-table> tbody").append(newRow);
