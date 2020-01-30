@@ -87,14 +87,17 @@ $("#submit").on("click", function(event){
 
         console.log(response);
         var result = response.results
-        // $(".searchResults").text(JSON.stringify(response));
         var i;
         for (i = 0; i < result.length; i++){
             var id= result[i].id
             console.log(result[i].id);
             console.log(result[i].title);
             recipeId = result[i].id;
-            var p = $("<p>");
+
+            var p = $("<ul>");
+            p.addClass("foodList");
+            $(".searchResults").append(p);
+
             var picture = $("<img>");
         var imageID = result[i].id;
         var image = "https://spoonacular.com/recipeImages/"+imageID+"-556x370.jpg"
@@ -126,4 +129,4 @@ $(document).on("click", "img", function(event){
    
 });
 
-// var secondQueryURL= "https://api.spoonacular.com/recipes/"+ idNum + "/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d"
+
