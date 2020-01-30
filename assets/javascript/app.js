@@ -106,6 +106,7 @@ $("#submit").on("click", function(event){
         $(".searchResults").append(p,picture);
         }
     }); 
+    clearImages();
 });
 
 $(document).on("click", "img", function(event){
@@ -127,6 +128,10 @@ $(document).on("click", "img", function(event){
         // location.href = sourceURL;
     })
    
-});
+}); 
+
+function clearImages() {
+    $(".searchResults").empty();
+}
 
 
