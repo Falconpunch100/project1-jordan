@@ -86,19 +86,20 @@ $("#submit").on("click", function(event){
     }).then(function(response) {
         console.log(response);
         var result = response.results
-        // $(".searchResults").text(JSON.stringify(response));
         var i;
         for (i = 0; i < result.length; i++){
             console.log(result[i].id);
             console.log(result[i].title);
             recipeId = result[i].id;
-            var p = $("<p>");
-            var q = $("<img>");
+            var p = $("<ul>");
+            p.addClass("foodList");
+            $(".searchResults").append(p);
+            var picture = $("<img>");
         var imageID = result[i].id;
         var image = "https://spoonacular.com/recipeImages/"+imageID+"-556x370.jpg"
-        q.attr("src", image);
+        picture.attr("src", image);
         p.text(result[i].title);
-        $(".searchResults").append(p,q);
+        $(".searchResults").append(p,picture);
         }
     }); 
 });
@@ -112,6 +113,16 @@ $(document).on("click", "img", function(event){
     // location.href = recipeLink;
     console.log("potato");
 });
+
+
+
+
+
+
+
+
+
+
 //Create the new row
 var newRow = $("<tr>").append(
     $("<td>").text(placeholder),
