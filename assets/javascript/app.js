@@ -72,5 +72,3 @@ $(document).on("click", "img", function(event){
 function clearImages() {
     $(".searchResults").empty();
 }
-
-
