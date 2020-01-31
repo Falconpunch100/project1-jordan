@@ -72,8 +72,8 @@ var storedResponse = {
 
 // API Key: d7615b5038b14b0e99d9079f0aee801d
 //example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
-
 var recipeId;
+var picture;
 //when search button is clicked the searchFood() function is run---- takes search keyword and adds into the queryURL then makes an AJAX call with the url and returnes the data
 $("#submit").on("click", function(event){
     
@@ -89,34 +89,29 @@ $("#submit").on("click", function(event){
         var result = response.results
         var i;
         for (i = 0; i < result.length; i++){
-            var id= result[i].id
-            console.log(result[i].id);
-            console.log(result[i].title);
-            recipeId = result[i].id;
 
+            recipeId = result[i].id;
+            var image = "https://spoonacular.com/recipeImages/"+recipeId+"-556x370.jpg";
+            picture = $("<img>");
+            picture.attr("data-image", recipeId);
+            picture.attr("src", image);
+            
             var p = $("<ul>");
             p.addClass("foodList");
-            $(".searchResults").append(p);
-
-            var picture = $("<img>");
-        var imageID = result[i].id;
-        var image = "https://spoonacular.com/recipeImages/"+imageID+"-556x370.jpg"
-        picture.attr("src", image);
-        p.text(result[i].title);
-        $(".searchResults").append(p,picture);
+            p.text(result[i].title);
+            
+            $(".searchResults").append(picture,p);
         }
     }); 
     clearImages();
 });
 
 $(document).on("click", "img", function(event){
-
-    //make a new api call
-    console.log("hello")
     event.preventDefault();
-    var recipeLink = "https://api.spoonacular.com/recipes/"+ recipeId + "/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d"
-    
-    console.log(recipeLink);
+    //make a new api call
+    var pictureID = $(this).attr("data-image");
+    console.log(pictureID);
+    var recipeLink = "https://api.spoonacular.com/recipes/"+pictureID+"/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d";
 
     $.ajax({
         url: recipeLink,
