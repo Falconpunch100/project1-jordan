@@ -73,37 +73,65 @@ var storedResponse = {
 // API Key: d7615b5038b14b0e99d9079f0aee801d
 //example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
 
-
+var recipeId;
 //when search button is clicked the searchFood() function is run---- takes search keyword and adds into the queryURL then makes an AJAX call with the url and returnes the data
 $("#submit").on("click", function(event){
     
     event.preventDefault();
     var searched = $(".searchbar").val().trim();
-    var queryURL = "https://api.spoonacular.com/recipes/search?query=" + searched + "&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
+    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + searched + "&maxFat=25&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
      $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
+
         console.log(response);
         var result = response.results
-        // $(".searchResults").text(JSON.stringify(response));
         var i;
         for (i = 0; i < result.length; i++){
+            var id= result[i].id
             console.log(result[i].id);
             console.log(result[i].title);
-            var p = $("<p>");
-            p.text(result[i].title).val();
+            recipeId = result[i].id;
+
+            var p = $("<ul>");
+            p.addClass("foodList");
             $(".searchResults").append(p);
 
+            var picture = $("<img>");
+        var imageID = result[i].id;
+        var image = "https://spoonacular.com/recipeImages/"+imageID+"-556x370.jpg"
+        picture.attr("src", image);
+        p.text(result[i].title);
+        $(".searchResults").append(p,picture);
         }
-    });
-    
+    }); 
+    clearImages();
 });
-//Create the new row
-var newRow = $("<tr>").append(
-    $("<td>").text(placeholder),
-    $("<td>").text(placeholder),
-    $("<td>").text(placeholder),
-);
-//Append new row to the table
-$("#placeholder-table> tbody").append(newRow);
+
+$(document).on("click", "img", function(event){
+
+    //make a new api call
+    console.log("hello")
+    event.preventDefault();
+    var recipeLink = "https://api.spoonacular.com/recipes/"+ recipeId + "/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d"
+    
+    console.log(recipeLink);
+
+    $.ajax({
+        url: recipeLink,
+        method: "GET"
+    }).then(function(data) {
+        var sourceURL= data.sourceUrl
+        console.log(sourceURL);
+        window.open(sourceURL, '_blank')
+        // location.href = sourceURL;
+    })
+   
+}); 
+
+function clearImages() {
+    $(".searchResults").empty();
+}
+
+
