@@ -8,6 +8,20 @@
 //limit search result to 10
 //those 10 images will then be displayed on the screen 
 
+$(window).on("load", function() {
+var randomNum = Math.floor(Math.random()* 716429)
+console.log(randomNum)
+var randomLink = "https://api.spoonacular.com/recipes/"+randomNum+"/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d";
+$.ajax({
+    url: randomLink,
+    method: "GET"
+}).then(function(listener) {
+console.log(listener);
+
+
+
+})
+});
 
 // API Key: d7615b5038b14b0e99d9079f0aee801d
 //example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
@@ -18,7 +32,7 @@ $("#submit").on("click", function(event){
     
     event.preventDefault();
     var searched = $(".searchbar").val().trim();
-    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + searched + "&maxFat=25&number=5&apiKey=d7615b5038b14b0e99d9079f0aee801d";
+    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + searched + "&maxFat=25&number=2&apiKey=d7615b5038b14b0e99d9079f0aee801d";
      $.ajax({
         url: queryURL,
         method: "GET"
