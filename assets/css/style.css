@@ -47,7 +47,7 @@
         transition: all 0.3s ease-out;
     }
 
-    .searchResults {
+    .searchResults, .flexbox{
         margin-left: auto;
         margin-right: auto;
     }
