@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
+    <!--Jordan's Background code-->
+    <div id="bg">
+        <img src="https://png.pngtree.com/thumb_back/fh260/back_pic/03/53/33/45579720d58a73c.jpg">
+      </div>
+
     <!--Jordan's Banner Code-->
-    <h1 id="banner">U Foods</h1>
+
+    <div class="banner-image">
+        <h1 id="banner">U Foods</h1>
+      </div> 
+
     <!---Zack's Search bar-->
     <!--Make it look like google-->
     <!--Making a box in the center under the header to have search bar-->
@@ -38,6 +48,8 @@
         </div>
     </div>
     <!-- Side bar -->
+
+
     <div class="row">
         <!--Create a placeholder section/div to hold the buttons-->
         <div class="col-2" id="sidebar">
@@ -45,8 +57,18 @@
                 <div class="card-header bg-primary text-white">
                     <h5>Suggested Food</h5>
                 </div>
+                <div class="sidenav">
+                    <h4 class="sidebarTitle">Common Searches</h4>
+                    <ul>
+                        <li><a href="#">American Food</li></a>
+                        <li><a href="#">Asian Food</li></a>
+                        <li><a href="#">Italian Food</li></a>
+                        <li><a href="#">Mexican Food</li></a>
+                    </ul>
+                </div>
                 <!--New buttons created by the user will get dumped here-->
                 <div class="card-body bg-secondary" id="athlete-btn-div">
+                    
                 </div>
             </div>
         </div>
@@ -58,6 +80,32 @@
               <p>Architect & Engineer</p>
             </div>
           </div>
+
+    <!-- placeholder boxes and columns that should show up with the info on something once someone searches for it -->
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="column">Box 1</div>
+        </div>
+        <div class="col">
+            <div class="column">Box 2</div>
+        </div>
+        <div class="col">
+            <div class="column">Box 3</div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col">
+                <div class="column">Box 4</div>
+            </div>
+            <div class="col">
+                <div class="column">Box 5</div>
+            </div>
+            <div class="col">
+                <div class="column">Box 6</div>
+            </div>
+        </div>
+    </div>
 
     <div class="searchResults"></div>
     <script src="assets/javascript/app.js"></script>
