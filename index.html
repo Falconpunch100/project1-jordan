@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,95 +11,97 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body>
-    <!--Jordan's Banner Code-->
+
+<body> 
+     <!--Jordan's Banner Code-->
     <h1 id="banner">U Foods</h1>
-    <!---Zack's Search bar-->
-    <!--Make it look like google-->
-    <!--Making a box in the center under the header to have search bar-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <div class="container">
-        <br />
+    <div class="d-flex" id="wrapper">
 
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                <form class="card card-sm">
-                    <div class="card-body row no-gutters align-items-center">
-                        <div class="col-auto">
-                            <i class="fas fa-search h4 text-body"></i>
-                        </div>
-                        <div class="col">
-                            <input class="searchbar" type="search" placeholder="Search Recipes" maxlength="240">
-                        </div>
-                        <!-- Submit Button -->
-                        <input type="submit" id="submit" class="submitbutton">
-                    </div>
-                </form>
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Search Recipes </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Beef</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Chicken</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Fish</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Pork</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Veggies</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Dessert</a>
             </div>
         </div>
+       
+        <!-- Page Content -->
+        
+           
+            <!---Zack's Search bar-->
+            <!--Make it look like google-->
+            <!--Making a box in the center under the header to have search bar-->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+                integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+                crossorigin="anonymous">
+            <div class="container">
+                
 
-        <!-- Side bar -->
-        <div class="row"></div>
-        <!--Create a placeholder section/div to hold the buttons-->
-        <div class="col-2" id="sidebar">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h5>Suggested Food</h5>
-                    <div class="category">
-                        <div id="american">American Food</div>
-                        <div id="asian">Asian Food</div>
-                        <div id="italian">Italian Food</div>
-                        <div id="mexican">Mexican Food</div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8">
+                        <form class="card card-sm">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <i class="fas fa-search h4 text-body"></i>
+                                </div>
+                                <div class="col">
+                                    <input class="searchbar" type="search" placeholder="Search Recipes" maxlength="240">
+                                </div>
+                                <!-- Submit Button -->
+                                <input type="submit" id="submit" class="submitbutton">
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <!--New buttons created by the user will get dumped here-->
-                <div class="card-body bg-secondary" id="athlete-btn-div">
+
+                <!-- Side bar -->
+                <div class="sidebar">
+                    <div class="row my-row">
+
+                        <!--Preloaded images and new images with recipes will show here-->
+                        <!--First row next to sidebar-->
+                        <div class="col-4  my-col">
+                            Box 1
+                        </div>
+                        <div class="col-4 my-col">
+                            Box 2
+                        </div>
+                        <div class="col-4 my-col">
+                            Box 3
+                        </div>
+                    </div>
+                    <div class="row my-row">
+                        <div class="col-4  my-col">
+                            Box 4
+                        </div>
+                        <div class="col-4  my-col">
+                            Box 5
+                        </div>
+                        <div class="col-4  my-col">
+                            Box 6
+                        </div>
+                    </div>
+                    <div class="row my-row">
+                        <div class="col-4 my-col">
+                            Box 7
+                        </div>
+                        <div class="col-4  my-col">
+                            Box 8
+                        </div>
+                        <div class="col-4 my-col">
+                            Box 9
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-sm-10">
-
-            <!-- Three columns -->
-            <!-- columns -->
-
-            <div class="row">
-                
-                    <div class="column" style="background:blue;">Box 1</div>
-                
-                
-                    <div class="column" style="background:blue;">Box 2</div>
-                
-                
-                    <div class="column" style="background:blue;">Box 3</div>
-                
-            </div>
-            <div class="row">
-               
-                    <div class="column" style="background:blue;">Box 4</div>
-                
-                    <div class="column" style="background:blue;">Box 5</div>
-                
-                    <div class="column" style="background:blue;">Box 6</div>
-                
-            </div>
-            <div class="row">
-                
-                    <div class="column" style="background:blue;">Box 7</div>
-                
-               
-                    <div class="column" style="background:blue;">Box 8</div>
-                
-                    <div class="column" style="background:blue;">Box 9</div>
-                
-            </div>
-        </div>
-        ​
-
-    </div>
-
-
-    <script src="assets/javascript/app.js"></script>
+       
+        <script src="assets/javascript/app.js">
+        </script>
 </body>
+
 </html>

@@ -30,7 +30,7 @@
         /* padding: 6px 8px 6px 16px; */
         font-size: 20px;
         left: 10%;
-        float: left;
+        
     } 
 
     .submitbutton {
@@ -48,25 +48,12 @@
         letter-spacing: 1px;
         transition: all 0.3s ease-out;
     }
-    .gridcontainer {
-        width: 475px;
-      
+    
+    .my-col {
+        border: 1px solid black;
         padding: 5px;
-        margin:1px;
-       
+
     }
-    .column {
-        width: 125px;
-        height:125px;
-        padding: 80px;
-        text-align: center;
-        font-size: 20px;
-        cursor: pointer;
-        color: white;
-        margin: 30px;
-        
-    }
-   
   
    
       
