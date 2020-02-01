@@ -1,6 +1,6 @@
 .banner-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://image.shutterstock.com/image-photo/mexican-taco-meat-beans-vegetables-260nw-692950210.jpg");
+  url("https://image.shutterstock.com/image-photo/mexican-taco-meat-beans-vegetables-260nw-692950210.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,66 +24,6 @@
 }
 
 #banner {
-<<<<<<< HEAD
-    background-image: url("../images/xbeEgrNvSHyJVxgOElLg_potato\ skins\ SITE-3.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: auto;
-    padding: 50px;
-    text-align: center;
-    font-size: 100px;
-    background-color: green;
-    }
-
-    body {
-        background-color: skyblue;
-    }
-    
-    .searchbar {
-        border: none;
-        margin: auto;
-        width:100%
-    }
-    
-    .searchbar:hover, .searchbar:active, .searchbar:focus {
-        border: none;
-        outline: none;
-        box-shadow: none;
-    }
-
-    #sidebar {
-        /*height: 100%; /* Full-height: remove this if you want "auto" height */
-        /* padding: 6px 8px 6px 16px; */
-        font-size: 20px;
-        left: 10%;
-        
-    } 
-
-    .submitbutton {
-        display: block;
-        box-sizing: border-box;
-        margin: 0 auto;
-        padding: 8px;
-        width: 80%;
-        max-width: 100px;
-        border-radius: 8px;
-        background: tomato;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        letter-spacing: 1px;
-        transition: all 0.3s ease-out;
-    }
-    
-    .my-col {
-        border: 1px solid black;
-        padding: 5px;
-
-    }
-  
-   
-      
-=======
   color: rgb(255, 255, 197);
   font-family: "Encode Sans Condensed", sans-serif;
   background-size: cover;
@@ -186,12 +126,13 @@ body {
   height: 42px;
   padding-top: 8px;
   text-align: center;
-  background-color: #007bff;
-  opacity: 75%;
+  
+  opacity: 100%;
 }
 
 .search-result-details-title {
   color: white;
   opacity: 100%;
 }
->>>>>>> 81057fcce3537b2b04f971972031d71585bcaae3
+
+
