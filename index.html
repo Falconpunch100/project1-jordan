@@ -1,113 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>U Foods</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous"
+  />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
-    <!--Jordan's Background code-->
-    <div id="bg">
-        <img src="https://png.pngtree.com/thumb_back/fh260/back_pic/03/53/33/45579720d58a73c.jpg">
-      </div>
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
 
     <!--Jordan's Banner Code-->
 
     <div class="banner-image">
-        <h1 id="banner">U Foods</h1>
-      </div> 
+      <h1 id="banner">U Foods</h1>
+    </div>
 
-    <!---Zack's Search bar-->
-    <!--Make it look like google-->
-    <!--Making a box in the center under the header to have search bar-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <div class="container">
-        <br />
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                <form class="card card-sm">
-                    <div class="card-body row no-gutters align-items-center">
-                        <div class="col-auto">
-                            <i class="fas fa-search h4 text-body"></i>
+    <!-- 
+
+        | LC | RC    |
+        |    |       |
+    -->
+    <div class="content-container">
+        <div class="content">
+            <div class="row">
+                <!-- left nav column -->
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="sidenav">Suggested Food</h5>
                         </div>
-                        <div class="col">
-                            <input class="searchbar" type="search" placeholder="Search Recipes" maxlength="240">
+                        <div class="sidenav">
+                            <ul>
+                                <li><a href="#">American Food</li></a>
+                                <li><a href="#">Asian Food</li></a>
+                                <li><a href="#">Italian Food</li></a>
+                                <li><a href="#">Mexican Food</li></a>
+                            </ul>
                         </div>
-                        <!-- Submit Button -->
-                        <input type="submit" id="submit" class="submitbutton">
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- Side bar -->
-
-
-    <div class="row">
-        <!--Create a placeholder section/div to hold the buttons-->
-        <div class="col-2" id="sidebar">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h5>Suggested Food</h5>
                 </div>
-                <div class="sidenav">
-                    <h4 class="sidebarTitle">Common Searches</h4>
-                    <ul>
-                        <li><a href="#">American Food</li></a>
-                        <li><a href="#">Asian Food</li></a>
-                        <li><a href="#">Italian Food</li></a>
-                        <li><a href="#">Mexican Food</li></a>
-                    </ul>
-                </div>
-                <!--New buttons created by the user will get dumped here-->
-                <div class="card-body bg-secondary" id="athlete-btn-div">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="flexbox">
-            <img src="img_avatar.png" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
-            </div>
-          </div>
-
-    <!-- placeholder boxes and columns that should show up with the info on something once someone searches for it -->
-    <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="column">Box 1</div>
-        </div>
-        <div class="col">
-            <div class="column">Box 2</div>
-        </div>
-        <div class="col">
-            <div class="column">Box 3</div>
-        </div>
-    </div>
-        <div class="row">
-            <div class="col">
-                <div class="column">Box 4</div>
-            </div>
-            <div class="col">
-                <div class="column">Box 5</div>
-            </div>
-            <div class="col">
-                <div class="column">Box 6</div>
-            </div>
+                <!-- right recipe search + results -->
+                <div class="col recipe-col">
+                    <!-- search box row -->
+                    <div class="row">
+                        <div class="searchbar-container">
+                            <form class="card card-sm">
+                                <div class="row card-body no-gutters align-items-center">
+                                  <div class="col-auto">
+                                    <i class="fas fa-search h4 text-body"></i>
+                                  </div>
+                                  <div class="col">
+                                    <input
+                                      class="searchbar"
+                                      type="search"
+                                      placeholder="Search Recipes"
+                                      maxlength="240"
+                                    />
+                                  </div>
+                            
+                                  <input type="submit" id="submit" class="submitbutton" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+               
+                    <!-- search results -->
+                    <div class="row">
+                        <div id="search-results">
+                            <!-- <div class="search-result">
+                                <div class="search-result-image">
+                                    <img src="https://i.pinimg.com/474x/b5/3d/e7/b53de7415b690b4af325e052bf44d20a.jpg" />
+                                </div>
+                                <div class="search-result-details">
+                                    <div class="search-result-details-title">
+                                    Potato Stew
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+                    </div>
+              </div>
         </div>
     </div>
 
-    <div class="searchResults"></div>
+    <div class="banner-image">
+      FOOTER
+    </div>
+
     <script src="assets/javascript/app.js"></script>
-</body>
+  </body>
 </html>
