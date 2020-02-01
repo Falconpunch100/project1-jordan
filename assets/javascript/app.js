@@ -7,26 +7,8 @@
 //** THE PULL Should list most recent published recipes first then going backwards
 //limit search result to 10
 //those 10 images will then be displayed on the screen 
-
-$(window).on("load", function() {
-var randomNum = Math.floor(Math.random()* 716429)
-console.log(randomNum)
-var randomLink = "https://api.spoonacular.com/recipes/"+randomNum+"/information?includeNutrition=false&apiKey=d7615b5038b14b0e99d9079f0aee801d";
-$.ajax({
-    url: randomLink,
-    method: "GET"
-}).then(function(listener) {
-console.log(listener);
-
-
-
-})
-});
-
 // API Key: d7615b5038b14b0e99d9079f0aee801d
 //example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
-
-
 // helper search functions
 function bindImageClickEvents() {
     $(".search-result img").click(function(event){
@@ -53,7 +35,7 @@ function searchAndDisplayResult(query) {
     // clear previous results, and show loading messages
     $("#search-results").html("Loading...");
 
-    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&maxFat=25&number=9&apiKey=d7615b5038b14b0e99d9079f0aee801d";
+    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&maxFat=25&number=0&apiKey=d7615b5038b14b0e99d9079f0aee801d";
     $.ajax({
        url: queryURL,
        method: "GET"
@@ -122,4 +104,38 @@ $(document).ready(function() {
     var randomQuery = getRandomInt(0, queries.length - 1);
     searchAndDisplayResult(queries[randomQuery]);
 });
-
+var postal;
+var weatherAPI 
+//creating the secondary API call to our geolocation
+$(window).on("load", function() {
+    var geoLocation = "https://geolocation-db.com/jsonp/0f761a30-fe14-11e9-b59f-e53803842572";
+    
+	$.ajax({
+		url: geoLocation,
+		jsonpCallback: "callback",
+		dataType: "jsonp",
+		success: function( location ) {
+            console.log(location.country_name)
+            console.log(location.postal)
+            postal = location.postal
+            weatherAPI = "https://api.openweathermap.org/data/2.5/weather?zip=" + postal + "&appid=f020cb128a346025ae9c0806ba1c8552";
+		}
+	}).then(function() {
+        $.ajax({
+            url: weatherAPI,
+            method: "GET"
+        }).then(function(data) {
+            console.log(data);
+            var location = data.name
+            $("#location").text(location + ", " + data.sys.country)
+            var mainTemp= parseInt((data.main.temp -273.15) *1.80 + 32)
+            $("#temp").text(mainTemp + " F")
+            var feelsLike = parseInt((data.main.feels_like -273.15) *1.80 + 32)
+            $("#feelsLike").text(feelsLike + " F")
+            var tempMin = parseInt((data.main.temp_min -273.15) *1.80 + 32)
+            $("#min").text(tempMin + " F")
+            var tempMax =  parseInt((data.main.temp_max -273.15) *1.80 + 32)
+            $("#max").text(tempMax + " F")
+        })
+    });		
+});
