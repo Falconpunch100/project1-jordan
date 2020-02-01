@@ -1,26 +1,12 @@
 .banner-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://image.shutterstock.com/image-photo/mexican-taco-meat-beans-vegetables-260nw-692950210.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    padding:125px;
 }
-
-#submit {
-    color: #1D9AF2;
-    background-color: #292D3E;
-    border: 1px solid #1D9AF2;
-    border-radius: 4px;
-    padding: 0 15px;
-    cursor: pointer;
-    height:32px;
-    font-size:14px;
-    transition: all 0.2s ease-in-out;
-    }
-    #submit:hover {
-    transform: scale(1.1);
-    }
 
 #banner {
     color: rgb(255, 255, 197);
@@ -32,49 +18,67 @@
     font-size: 100px;
     }
 
-    body {
+#flavor {
+    color: rgb(255, 255, 197);
+    font-family: 'Encode Sans Condensed', sans-serif;
+    background-size: cover;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+    font-size: 40px;
+    }    
+
+body {
         background-color: skyblue;
     }
-
-    #bg {
-        position: fixed; 
-        top: -50%; 
-        left: -50%; 
-        width: 200%; 
-        height: 200%;
-    }
-
-      #bg img {
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        right: 0; 
-        bottom: 0; 
-        margin: auto; 
-        min-width: 50%;
-        min-height: 50%;
-      }
     
-    .searchbar {
+.searchbar {
         border: none;
         margin: auto;
         width:100%
     }
+
+#mostSearches {
+    list-style-type: none;
+    margin:0;
+    }
+
+#mostSearches li {
+        padding:2%;
+    }
+
+#mostSearches .btn {
+        min-width:60%;
+    }
+
+a{
+    color: black;
+    text-decoration: none;
+    }
     
-    .searchbar:hover, .searchbar:active, .searchbar:focus {
+.searchbar:hover, .searchbar:active, .searchbar:focus {
         border: none;
         outline: none;
         box-shadow: none;
     }
 
-    #sidebar {
-        /*height: 100%; /* Full-height: remove this if you want "auto" height */
-        /* padding: 6px 8px 6px 16px; */
+a:active, a:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+a:hover {
+    color:#1D9AF2;   
+    }
+
+#sidebar {
+        margin:10px;
         font-size: 20px;
-        left: 10%;
+        left: 7%;
     } 
 
-    .submitbutton {
+.submitbutton {
         display: block;
         box-sizing: border-box;
         margin: 0 auto;
@@ -90,14 +94,19 @@
         transition: all 0.3s ease-out;
     }
 
-    .column {
+.column {
         width: 33.33%;
-        padding: 70px 100px 70px 100px;
+        padding: 75px 100px 75px 100px;
         border: solid 1px white;
         background-color: #007bff;
         text-align: center;
         font-size: 20px;
         cursor: pointer;
         color: white;
-        margin: 30px;
+        margin: 20px;
+    }
+
+.searchIcon{
+        padding-top: 5px;
+        padding-right: 5px;
     }

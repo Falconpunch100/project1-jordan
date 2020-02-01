@@ -13,15 +13,16 @@
 </head>
 <body>
     <!--Jordan's Background code-->
-    <div id="bg">
-        <img src="https://png.pngtree.com/thumb_back/fh260/back_pic/03/53/33/45579720d58a73c.jpg">
-      </div>
+    <div id="bg"></div>
 
     <!--Jordan's Banner Code-->
 
+    <section>
     <div class="banner-image">
         <h1 id="banner">U Foods</h1>
+        <p id="flavor">For all of your food needs to satisfy your cravings!</p>
       </div> 
+    </section>
 
     <!---Zack's Search bar-->
     <!--Make it look like google-->
@@ -35,13 +36,14 @@
                 <form class="card card-sm">
                     <div class="card-body row no-gutters align-items-center">
                         <div class="col-auto">
-                            <i class="fas fa-search h4 text-body"></i>
+                            <i class="fas fa-search h4 text-body searchIcon"></i>
                         </div>
                         <div class="col">
                             <input class="searchbar" type="search" placeholder="Search Recipes" maxlength="240">
                         </div>
                         <!-- Submit Button -->
-                        <input type="submit" id="submit" class="submitbutton">
+                        <button type="button" class="btn btn-primary">Submit Query</button>
+
                     </div>
                 </form>
             </div>
@@ -55,15 +57,14 @@
         <div class="col-2" id="sidebar">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h5>Suggested Food</h5>
+                    <h5>Common Searches</h5>
                 </div>
                 <div class="sidenav">
-                    <h4 class="sidebarTitle">Common Searches</h4>
-                    <ul>
-                        <li><a href="#">American Food</li></a>
-                        <li><a href="#">Asian Food</li></a>
-                        <li><a href="#">Italian Food</li></a>
-                        <li><a href="#">Mexican Food</li></a>
+                    <ul id="mostSearches">
+                        <li><button type="button" class="btn btn-outline-primary">American Food</button></li>
+                        <li><button type="button" class="btn btn-outline-primary">Asian Food</button></li>
+                        <li><button type="button" class="btn btn-outline-primary">Italian Food</button></li>
+                        <li><button type="button" class="btn btn-outline-primary">Mexican Food</button></li>
                     </ul>
                 </div>
                 <!--New buttons created by the user will get dumped here-->
