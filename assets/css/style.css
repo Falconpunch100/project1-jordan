@@ -84,6 +84,7 @@ body {
   font-size: 20px;
   left: 10%;
   background-color: brown;
+  text-align: center;
 }
 
 .submitbutton {
@@ -131,4 +132,8 @@ body {
 .search-result-details-title {
   color: white;
   opacity: 100%;
+}
+
+.footer {
+  text-align: center;
 }
