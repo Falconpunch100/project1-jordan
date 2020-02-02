@@ -41,7 +41,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 400px;
-  background: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/53/33/45579720d58a73c.jpg);
+  background: url("../images/Explore Food Border Canape Food and more.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -131,7 +131,6 @@ body {
 
 .search-result-details-title {
   color: white;
-  opacity: 100%;
 }
 
 .footer {
