@@ -9,10 +9,9 @@
 }
 
 #submit {
-  color: #1d9af2;
-  background-color: #292d3e;
-  border: 1px solid #1d9af2;
-  border-radius: 4px;
+  color: #black;
+  background-color: #tomato;
+  border: none;
   padding: 0 15px;
   cursor: pointer;
   height: 32px;
