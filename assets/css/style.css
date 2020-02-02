@@ -79,11 +79,12 @@ body {
   box-shadow: none;
 }
 
-#sidebar {
+.sidenav {
   /*height: 100%; /* Full-height: remove this if you want "auto" height */
   /* padding: 6px 8px 6px 16px; */
   font-size: 20px;
   left: 10%;
+  background-color: brown;
 }
 
 .submitbutton {
