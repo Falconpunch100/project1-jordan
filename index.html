@@ -38,22 +38,23 @@
         | LC | RC    |
         |    |       |
     -->
-    <div class="content-container">
+    <footer class="content-container">
         <div class="content">
             <div class="row">
                 <!-- left nav column -->
                 <div class="col-3">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="sidenav">Suggested Food</h5>
+                    <div class="card rain">
+                        <div class="sidenav">
+                            <h5 class="sidenav">Local Weather</h5>
                         </div>
                         <div class="sidenav">
-                          <ul id="mostSearches">
-                            <li><button type="button" class="btn btn-outline-warning">American Food</button></li>
-                            <li><button type="button" class="btn btn-outline-warning">Asian Food</button></li>
-                            <li><button type="button" class="btn btn-outline-warning">Italian Food</button></li>
-                            <li><button type="button" class="btn btn-outline-warning">Mexican Food</button></li>
-                        </ul>
+                            <ul>
+                                <div>Location: <span id="location"> </span> </div>
+                                <div>Temperature: <span id="temp"> </span></div>
+                                <div>Feels like: <span id="feelsLike"></span> </div>
+                                <div>Min Temp: <span id="min"></span></div>
+                                <div>Max Temp: <span id="max"></span></div>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -102,10 +103,11 @@
         </div>
     </div>
 
-    <div class="banner-image">
-      FOOTER
-    </div>
-
+    <footer>
+      <div class="bottom">
+        If it's not broken, let's fix it till it is.
+      </div>
+    </footer>
     <script src="assets/javascript/app.js"></script>
   </body>
 </html>
