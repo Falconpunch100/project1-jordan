@@ -35,7 +35,7 @@ function searchAndDisplayResult(query) {
     // clear previous results, and show loading messages
     $("#search-results").html("Loading...");
 
-    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&maxFat=25&number=1&apiKey=d7615b5038b14b0e99d9079f0aee801d";
+    var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&maxFat=25&number=9&apiKey=d7615b5038b14b0e99d9079f0aee801d";
     $.ajax({
        url: queryURL,
        method: "GET"

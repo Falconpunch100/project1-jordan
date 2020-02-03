@@ -83,8 +83,8 @@ body {
   /* padding: 6px 8px 6px 16px; */
   font-size: 20px;
   left: 10%;
-  background-color: brown;
   text-align: center;
+  background-color: transparent;
 }
 
 .submitbutton {
@@ -114,6 +114,7 @@ body {
 .search-result-image {
   height: 200px;
   width: 250px;
+  cursor: pointer;
 }
 
 .search-result-image img {
@@ -133,6 +134,32 @@ body {
   color: white;
 }
 
-.footer {
+footer {
+    text-align: center;
+    height: 25px;
+    background: #222;
+    color: #fff;
+    background-color: transparent;
+}
+footer:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+  padding: 0;
+}
+.bottom {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rain {
+  background-image: url("../images/1027.gif");
   text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
