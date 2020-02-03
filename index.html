@@ -28,40 +28,27 @@
         | LC | RC    |
         |    |       |
     -->
-  <div class="content-container">
-    <div class="content">
-      <div class="row">
-        <!-- left nav column -->
-        <div class="col-3">
-          <div class="card">
-            <div class="card-header bg-primary text-white">
-              <h5 class="sidenav">Suggested Food</h5>
-            </div>
-            <div class="sidenav">
-              <ul>
-                <li><a href="#">American Food</li></a>
-                <li><a href="#">Asian Food</li></a>
-                <li><a href="#">Italian Food</li></a>
-                <li><a href="#">Mexican Food</li></a>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- right recipe search + results -->
-        <div class="col recipe-col">
-          <!-- search box row -->
-          <div class="row">
-            <div class="searchbar-container">
-              <form class="card card-sm">
-                <div class="row card-body no-gutters align-items-center">
-                  <div class="col-auto">
-                    <i class="fas fa-search h4 text-body"></i>
-                  </div>
-                  <div class="col">
-                    <input class="searchbar" type="search" placeholder="Search Recipes" maxlength="240" />
-                  </div>
 
-                  <input type="submit" id="submit" class="submitbutton" />
+    <footer class="content-container">
+        <div class="content">
+            <div class="row">
+                <!-- left nav column -->
+                <div class="col-3">
+                    <div class="card rain">
+                        <div class="sidenav">
+                            <h5 class="sidenav">Local Weather</h5>
+                        </div>
+                        <div class="sidenav">
+                            <ul>
+                                <div>Location: <span id="location"> </span> </div>
+                                <div>Temperature: <span id="temp"> </span></div>
+                                <div>Feels like: <span id="feelsLike"></span> </div>
+                                <div>Min Temp: <span id="min"></span></div>
+                                <div>Max Temp: <span id="max"></span></div>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
               </form>
             </div>
@@ -86,13 +73,13 @@
         </div>
       </div>
     </div>
-
-    <footer class = "footer">
-      Created by Silver Snakes 2020
+            
+    <footer>
+      <div class="bottom">
+        If it's not broken, let's fix it till it is.
+      </div>
     </footer>
-      
-    
-
+            
     <script src="assets/javascript/app.js"></script>
 </body>
 
