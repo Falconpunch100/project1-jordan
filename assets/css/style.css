@@ -17,6 +17,7 @@
   font-size: 14px;
   transition: all 0.2s ease-in-out;
 }
+
 #submit:hover {
   transform: scale(1.1);
 }
@@ -153,11 +154,11 @@ html {
 }
 
 footer {
-    text-align: center;
-    height: 25px;
-    background: #222;
-    color: #fff;
-    background-color: transparent;
+  text-align: center;
+  height: 25px;
+  background: #222;
+  color: #fff;
+  background-color: transparent;
 }
 footer:before {
   content: "";
@@ -176,7 +177,6 @@ footer:before {
 
 .rain {
   background-image: url("../images/1027.gif");
-  text-align: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
