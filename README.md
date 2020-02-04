@@ -1,4 +1,3 @@
-Test will add description laterche
 This website is designed for the average person looking for food recipes! Make sure you type the recipe you are looking for and watch the results pop up. You also will see the temperature logged on the left side of the screen for your conveince! This is supposed to be enjoyed by all!
 
 deployed page: https://bgeorgiev268.github.io/project1/
