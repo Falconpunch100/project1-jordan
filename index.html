@@ -25,13 +25,20 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
   <body>
-
+    <section id="hero">
+      <div class="container-fluid">
+        <div class="centihead col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 id="banner">U Foods</h1>
+        </div>
+      </div>
+    </section>
     <!--Jordan's Banner Code-->
 
-    <section>
+
+      <!--
     <div class="banner-image">
       <h1 id="banner">U Foods</h1>
-    </div>
+    </div>-->
 
     <!-- 
 
@@ -43,20 +50,22 @@
             <div class="row">
                 <!-- left nav column -->
                 <div class="col-3">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="sidenav">Suggested Food</h5>
+                    <div class="card rain">
+                        <div class="sidenav">
+                            <h5 class="sidenav">Local Weather</h5>
                         </div>
                         <div class="sidenav">
-                          <ul id="mostSearches">
-                            <li><button type="button" class="btn btn-outline-warning">American Food</button></li>
-                            <li><button type="button" class="btn btn-outline-warning">Asian Food</button></li>
-                            <li><button type="button" class="btn btn-outline-warning">Italian Food</button></li>
-                            <li><button type="button" class="btn btn-outline-warning">Mexican Food</button></li>
-                        </ul>
+                            <ul>
+                                <div>Location: <span id="location"> </span> </div>
+                                <div>Temperature: <span id="temp"> </span></div>
+                                <div>Feels like: <span id="feelsLike"></span> </div>
+                                <div>Min Temp: <span id="min"></span></div>
+                                <div>Max Temp: <span id="max"></span></div>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                
                 <!-- right recipe search + results -->
                 <div class="col recipe-col">
                     <!-- search box row -->
@@ -101,11 +110,11 @@
               </div>
         </div>
     </div>
-
-    <div class="banner-image">
-      FOOTER
-    </div>
-
+    <footer>
+      <div class="bottom">
+        Thank you for visiting!
+      </div>
+    </footer>
     <script src="assets/javascript/app.js"></script>
   </body>
 </html>

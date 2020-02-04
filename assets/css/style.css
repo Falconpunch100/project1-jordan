@@ -10,8 +10,7 @@
 #submit {
   color: black;
   background-color: tomato;
-  border: 1px solid black;
-  border-radius: 4px;
+  border: none;
   padding: 0 15px;
   cursor: pointer;
   height: 32px;
@@ -27,13 +26,34 @@
   font-family: "Encode Sans Condensed", sans-serif;
   background-size: cover;
   margin: auto;
-  padding: 50px;
   text-align: center;
   font-size: 100px;
-}
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+
+  }
 
 body {
-  color: white;
+  width:100%;
+  height:100%;
+  background: rgb(120,177,250);
+background: linear-gradient(90deg, rgba(120,177,250,1) 0%, rgba(164,255,242,1) 100%);
+}
+
+html {
+  width:100%;
+  height:100%;
+}
+
+#hero {
+  border:solid 1px black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height:100%;
 }
 
 .content-container {
@@ -41,9 +61,17 @@ body {
   width: 100%;
   height: 100%;
   min-height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  /*background: url("../images/Explore Food Border Canape Food and more.jpg");*/
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.container-fluid {
+  height:100%;
+}
+
+.centihead {
+  height:100%;
 }
 
 .content {
@@ -78,11 +106,14 @@ body {
   box-shadow: none;
 }
 
-#sidebar {
+.sidenav {
   /*height: 100%; /* Full-height: remove this if you want "auto" height */
   /* padding: 6px 8px 6px 16px; */
   font-size: 20px;
   left: 10%;
+  text-align: center;
+  background-color: transparent;
+  color:white;
 }
 
 .search-result {
@@ -96,6 +127,12 @@ body {
 .search-result-image {
   height: 200px;
   width: 250px;
+  cursor: pointer; 
+}
+.search-result-image img:hover {
+  width:300px;
+  height:250px;
+  transition: all 0.2s ease-out;
 }
 
 .search-result-image img {
@@ -109,11 +146,38 @@ body {
   height: 42px;
   padding-top: 8px;
   text-align: center;
-  background-color: #007bff;
-  opacity: 75%;
 }
 
 .search-result-details-title {
   color: white;
-  opacity: 100%;
+}
+
+footer {
+    text-align: center;
+    height: 25px;
+    background: #222;
+    color: #fff;
+    background-color: transparent;
+}
+footer:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+  padding: 0;
+}
+.bottom {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rain {
+  background-image: url("../images/1027.gif");
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
