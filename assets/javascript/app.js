@@ -5,11 +5,12 @@
 //that array is then pulled into the the ajax call for the API 
 // it will then have a jquery listener that will display that result in its corresponding html element 
 //** THE PULL Should list most recent published recipes first then going backwards
-//limit search result to 10
-//those 10 images will then be displayed on the screen 
+//limit search result to 9
+//those 9 images will then be displayed on the screen 
 // API Key: d7615b5038b14b0e99d9079f0aee801d
 //example request and response: https://api.spoonacular.com/recipes/search?query=cheese&number=2
 // helper search functions
+
 function bindImageClickEvents() {
     $(".search-result img").click(function(event){
         event.preventDefault();
@@ -119,13 +120,15 @@ $(window).on("load", function() {
             console.log(location.postal)
             postal = location.postal
             weatherAPI = "https://api.openweathermap.org/data/2.5/weather?zip=" + postal + "&appid=f020cb128a346025ae9c0806ba1c8552";
-		}
+        }
+        // then we create our third ajax call to open weather api
 	}).then(function() {
         $.ajax({
             url: weatherAPI,
             method: "GET"
         }).then(function(data) {
             console.log(data);
+            //storing variables with the correct kelvin to farenheight conversion 
             var location = data.name
             $("#location").text(location + ", " + data.sys.country)
             var mainTemp= parseInt((data.main.temp -273.15) *1.80 + 32)
